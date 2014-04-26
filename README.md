@@ -6,7 +6,7 @@
 
 4.git clone https://github.com/shashisp/iboilerplate.git 
 
-5. pip install -r requirements.txt
+5 pip install -r requirements.txt
 
 6.git add .
 
