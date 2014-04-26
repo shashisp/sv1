@@ -1,11 +1,19 @@
-1.git clone https://github.com/shashisp/iboilerplate.git
+1.mkdir myproject && cd myproject
 
-2.git add .
+2.virtualenv venv
 
-3.git commit -m 'your commit message'
+3.source venv/bin/activate
 
-4.heroku create myawesomeproject
+4.git clone https://github.com/shashisp/iboilerplate.git 
 
-5.git push heroku master
+5. pip install -r requirements.txt
 
-6.That's it you're done! :)
+6.git add .
+
+7.git commit -m 'your commit message'
+
+8.heroku create myawesomeproject
+
+9.git push heroku master
+
+10.That's it you're done! :)
