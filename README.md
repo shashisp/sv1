@@ -1,8 +1,8 @@
-1.'git clone https://github.com/shashisp/iboilerplate.git'
+1.git clone https://github.com/shashisp/iboilerplate.git
 
-2.'git add .'
+2.git add .
 
-3.'git commit -m 'your commit message'
+3.git commit -m 'your commit message'
 
 4.heroku create myawesomeproject
 
