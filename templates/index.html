@@ -2,41 +2,131 @@
 
 {% extends "base.html" %}
 {% block content %}
-<div class="splash">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 
-<div class="container">
-
-        <div class="row">
-          <div class="col-lg-12">
-            <h1>iBoilerplate</h1>
+<div id="x">
             
-            </div>
-          </div>
-        </div>
+    
+    <div class="row jumbotron_search">
+      <div class="col-md-12 text-center">
+        <ul class="list-unstyled index_welcome">
+         
 
+           <div id="container">
+    <li><h1 style="color:fff">Find the Nearest  
+    <div id="caption">
+        <span><a href="#">Photographers</a></span>
+        <span><a href="#">Caterers</a></span>
+        <span><a href="#">Venues</a></span>
+        <span><a href="#">Cakeshops</a></span>
+    </div>
+    around you
+    </h1></li>
+</div>
+<script>
+//$('#caption p:gt(0)').hide();
+$("#caption").css("width", $("#caption > span:first-child").width());
+$("#caption").css("height", $("#caption > span:first-child").height());
+var captionIdx = 0;
+var captionItemCount = $("#caption > span").length;
+setInterval(function() {
+    $("#caption span:eq(" + captionIdx + ")").fadeOut("slow");
+    captionIdx = (captionIdx + 1) % captionItemCount;
+    var $next = $("#caption span:eq(" + captionIdx + ")");
+    $("#caption").css("width", $next.width());
+    $("#caption").css("height", $next.height());
+    $next.fadeIn("slow");
+}, 2000);
+</script>
+<style>
+#container {
+    text-align: center;
+    /*border: 1px solid blue;*/
+       /* for illustration of size adaption */
+    display: block;
+}
+ 
+#caption {
+    padding: 0px;
+    display: inline-block;
+    position: relative;
+    vertical-align: bottom;
+    
+    -webkit-transition: width 0.25s linear;
+    -moz-transition: width 0.25s linear;
+    -ms-transition: width 0.25s linear;
+    -o-transition: width 0.25s linear;
+    transition: width 0.25s linear; 
+}
+ 
+#caption > span {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+ 
+#caption > span:first-child {
+    display: inline-block;
+}
+</style>
+           <br/>
+           <br/>
+           <br/>
+          <li>
+            <form id="search-form" action="/search/">
+              
+            <ul class="list-inline index_search">
+                
+                <li>
+                   <input type="text" id="search_term" class="form-control input-lg " placeholder="what you are Looking for ?" size="40" name="q">   
+                                 <!-- <input type="text" name="your-email" placeholder="you@yourmail.com" class="form-control cform-text input-lg" size="40" title="your email"> -->
+              <!-- <input type="submit" value="Sign up" class="cform-submit"> -->
+
+                </li>
+                
+                <!-- <li> -->
+                   <!-- <input type="text" id="search_term" class="form-control input-lg " placeholder="In Hubli" size="10" name="q">    -->
+                                 <!-- <input type="text" name="your-email" placeholder="you@yourmail.com" class="form-control cform-text input-lg" size="40" title="your email"> -->
+              <!-- <input type="submit" value="Sign up" class="cform-submit"> -->
+
+                <!-- </li> -->
+                
+                  
+                  <a class="remove_selected_location" href="/clear-location/" style="display:none" id="selected-location-overlay">
+                    <div class="selected_location">
+                      <div class="selected_location_name pull-left" id="location_name">
+                        
+                      </div>
+                      <div class="selected_location_cross pull-right">
+                        <span class="small">×</span>
+                      </div>
+                      <div class="clearfix"></div>
+                    </div>
+                  </a>
+                
+                </li>
+                    
+    
+                <li class="search_button_index">
+                  <input type="submit" class="btn btn-info btn-large" value="Search">
+                </li>
+    
+            </ul>
+            </form>
+          </li>
+          
+        </ul> 
+        
       </div>
     </div>
-    
-    <div class="section-tout">
-      <div class="container">
-             <center><h1>Features</h1> </center> 
-        <div class="row">
-          <div class="col-lg-4 col-sm-6">
-            <h3><i class="fa fa-user"></i> Django-Registration</h3>
-            <p>Integrated with Django-Regisration</p>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-              <h3><i class="fa fa-cloud"></i>Easy Deployment</h3>
-            <p>Deploy to heroku in 1 minute</p>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <h3><i class="fa fa-github"></i>Its open source</h3>
-            <p><a target="_blank" href="https://github.com/shashisp">Feel free to fork and add features</a></p>  
-          </div>
-          
-        </div>
-
-      </div>
-      </div>
+  
+                
+    </div>
+    </div>
+</div>
+<style>
+#x {background-image:url("http://www.zomato.com/images/homescreens/tourimages/feedtour/feed-search-bg2.jpg");}
+</style>
 
 {% endblock %}
