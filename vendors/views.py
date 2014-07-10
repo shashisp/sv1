@@ -12,13 +12,16 @@ from vendors.serializers import OrganisationSerializer
 
 
 
-class OrganisationViewSet(viewsets.ModelViewset)
-'''
-API end points that allow orgs to be viewed or edited
-'''
-queryset = Organisation.objects.all()
-serializer_class = OrganisationSerializer
 
+
+
+
+
+class OraganisationViewSet(viewsets.ModelViewSet):
+	queryset = Organisation.objects.all()
+	serializer_class = OrganisationSerializer
+	paginate_by = 10
+	paginate_by_param = "page_size"
 
 
 class TestList(ListView):
