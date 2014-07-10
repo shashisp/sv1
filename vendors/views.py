@@ -5,6 +5,19 @@ from forms import OrganisationForm
 from django.http import HttpResponseRedirect
 from django.core.context_processors import csrf
 from django.views.generic import ListView
+from rest_framework import viewsets
+from vendors.serializers import OrganisationSerializer
+
+
+
+
+
+class OrganisationViewSet(viewsets.ModelViewset)
+'''
+API end points that allow orgs to be viewed or edited
+'''
+queryset = Organisation.objects.all()
+serializer_class = OrganisationSerializer
 
 
 

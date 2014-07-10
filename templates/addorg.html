@@ -1,7 +1,7 @@
 
 
 {% extends "base.html" %}
-{% load crispy_forms_tags %}
+
 
 {% block content %}
 
@@ -10,7 +10,7 @@
 <form action="/join/" class="form-vertical" method="post"> {% csrf_token %}
 <p>
 
-   {% crispy form %}
+   {% form.as_p %}
 
 
 </p>
