@@ -8,6 +8,7 @@ dj-static==0.0.5
 django-autoslug==1.7.2
 django-autoslug-field==0.2.3
 django-crispy-forms==1.5.0
+--allow-unverified django-crispy-forms 
 django-filter==0.7
 django-gravatar2==1.1.4
 django-registration==1.0
