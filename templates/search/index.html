@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+ 
+
+{% block content %}
+
+<hr/>
+
+    <div class="container">
+
+        
+                {% for contact in contacts %}
+
+
+                <div class="row">
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="{{ contact.logo }}" height="200" width="200">
+                            <div class="caption">
+                                
+                                <h4><a href="/{{ contact.slug }}/">{{ contact.name }}</a>
+                                </h4>
+                                <p>{{ contact.address }} {{ contact.city }}</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">15 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                   
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+{% endfor %}
+{% endblock %}

@@ -38,8 +38,13 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'registration',
     'vendors',
-    'rest_framework'
-    #'crispy_forms',
+    'rest_framework',
+    'crispy_forms',
+    'main',
+    'django_gravatar',
+    'search',
+    
+
 
 )
 
@@ -97,7 +102,7 @@ STATIC_URL = '/static/'
 
 
 import dj_database_url
-#DATABASES['default'] =  dj_database_url.config()
+DATABASES['default'] =  dj_database_url.config()
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
@@ -128,3 +133,5 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
 }
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'

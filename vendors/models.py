@@ -1,5 +1,5 @@
 from django.db import models
-
+from autoslug.fields import AutoSlugField
 # Create your models here.
 
 
@@ -8,7 +8,9 @@ class Organisation(models.Model):
 		CITY_CHOICES = (
            ('1', 'Dharwad'),
            ('2', 'Hubli'),
-           ('3', 'Belgaum'),
+           ('3', 'Pune'),
+           ('4', 'Belgaum'),
+           ('5', 'Others'),
          )
 		SERVICE_CHOICES = (
 			('1', 'Photography'),
@@ -24,7 +26,7 @@ class Organisation(models.Model):
 		address = models.TextField(max_length=500)
 		city = models.CharField('City', max_length=200, choices=CITY_CHOICES)
 		contact = models.CharField('Phone', max_length=10,blank=False)
-		slug = models.SlugField(unique=True)
+		slug = AutoSlugField(populate_from=('name'))
 		logo = models.URLField("Enter Logo URL",blank=False)
 		description = models.TextField(blank=True)
 		#logo = models.ImageField()

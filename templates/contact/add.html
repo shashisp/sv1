@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div>
+	<center><h1>Why Join Samarambh?</h1></center>
+</div>
+<hr/>
+<br/>
+ <div class="col-sm-10">
+  	<div class="col-sm-3">
+ 	  <!-- <i class="fa fa-globe fa-5x"></i> <br/> -->
+ 	  <!-- <b>Get your Identity Online</b> -->
+ 		
+ 	</div>
+ 	<div class="col-sm-3">
+ 	  <i class="fa fa-globe fa-5x"></i> <br/>
+ 	  <b>Get your Identity Online</b>
+ 		
+ 	</div>
+ 	 	<div class="col-sm-3">
+ 	  <i class="fa fa-bar-chart-o fa-5x"></i><br/>
+ 	  <b>Get Insights</b>
+ 		
+ 	</div>
+ 	 	<div class="col-sm-3">
+ 	  <i class="fa fa-users fa-5x"></i><br/>
+ 	  <b>Reach More Users</b>
+ 		
+ </div>
+
+<hr/>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<center><h3>Add your Business</h3></center>
+<div class="col-sm-12">
+<form  class="form-vertical" method="post"> {% csrf_token %}
+
+<ul>
+ 
+    <!-- {% crispy form %} -->
+
+{{ form.as_p }}
+
+ 
+</ul>
+<input type="submit" class="btn btn-info" name="submit" value=" Register">
+</form>
+
+ </div>
+
+{% endblock %}
