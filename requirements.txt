@@ -1,3 +1,4 @@
+--allow-all-external
 Django==1.6.3
 Markdown==2.4.1
 South==1.0
