@@ -39,7 +39,7 @@ INSTALLED_APPS = (
     'registration',
     'vendors',
     'rest_framework',
-    'crispy_forms',
+    
     'main',
     'django_gravatar',
     'search',
